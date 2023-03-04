@@ -51,6 +51,7 @@ header{
     z-index: 999;
     position: sticky;
     transition: 0.8s ease;
+    border-radius: 10%;
 }
 .cta button{
     margin-left: 100px;
@@ -88,7 +89,7 @@ header{
     padding: 0 80px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    
     justify-content: center;
     position: relative;
 }
@@ -135,8 +136,7 @@ header{
 }
 
 .job-category{
-background-color: cadetblue;
-border: 1px solid rgb(0, 59, 59);
+background-color:#e9fbff;
 width: 80%;
 height: 430px;
 margin-top:50px;
@@ -168,6 +168,9 @@ font-size: 40px;
     color: black;
     font-size:large;
     padding: 50px;
+}
+.category a:hover{
+    color: #015c75;
 }
 
 .fourth-section{
@@ -231,7 +234,7 @@ font-size: 40px;
 }
 .search{
 	width:600px;
-	margin: 20px 250px;
+	margin: 20px 15%;
 }
 
 .search .search_box{
@@ -253,7 +256,7 @@ font-size: 40px;
 .search .search_box .btn{
 	position: absolute;
 	width: 0px;
-	cursor:wait;
+	cursor:pointer;
 }
 
 
@@ -261,7 +264,10 @@ font-size: 40px;
 	border-radius: 50px;
 }
 
+.fire{
+    color: red;
 
+}
 
 .search.searchbar .search_box .btn
 {
@@ -289,31 +295,64 @@ font-size: 40px;
 }
 .all-in-one{
     display: flex;
-    padding-top: 40px;    
+    padding-top: 40px; 
 }
 #search-icon button{
     width: 200px;
     border-color: #222;
     cursor:pointer;
-    background-image: url(./media/img/light\ blue\ straight.png);
+    background-image: url(./media/img/light\ blue\ paint\ brush.png);
     background-repeat: no-repeat;
     background-position:5px;
     background-size: cover;
     background-color: transparent;
-    border-color: #015c75;
+    border-color: white;
 }
 
 #search-icon button:hover{
     color:white;
     background-image: none;
     transition: 0.5s ease;
-    background-image: url(./media/img/light\ blue\ paint\ brush.png);
+    background-image:url(./media/img/light\ blue\ paint\ brush.png);
+    
 }
 
 #input-place{
     width:  1000px;
     padding-left: 100px;
     border-color: #222;
+}
+
+.new-jobs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin:5%;
+    margin-bottom: 70px;
+}
+.new-jobs h3{
+    text-align: center;
+}
+.new-jobs-divs{
+    border:1px solid #015c75;
+    width: 70%;
+    height: 300px;
+    margin: 5%;
+    padding: 40px;
+    border-radius: 30px;
+    background-color: #f2fcff;
+}
+
+
+
+.all-in-one select{
+    background-color:aliceblue;
+    color: #222;
+}
+
+.new-jobs-text{
+    text-align: center;
+    padding-top: 50px;
+    font-weight: bold;
 }
 
 /* For footer */
