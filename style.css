@@ -312,6 +312,10 @@ font-size: 40px;
     margin:5%;
     margin-bottom: 70px;
 }
+.new-jobs a{
+    margin-left: 20px;
+}
+
 .new-jobs h3{
     text-align: center;
 }
