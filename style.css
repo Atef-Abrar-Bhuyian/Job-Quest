@@ -126,6 +126,13 @@ header{
     cursor: pointer;
 }
 
+.search-button-home:hover{
+    background-color: #9ccdd9;
+    color: #222;
+    font-weight: bold;
+    transition: .3s ease;
+}
+
 .info{
     width: 50%;
     height: 100px;
@@ -369,6 +376,9 @@ font-size: 40px;
 .filter-section button:hover,
 .search-style:hover{
     background-color: #9ccdd9;
+    color: #222;
+    font-weight:900;
+    transition: .3s ease;
 }
 /* For footer */
 footer {
