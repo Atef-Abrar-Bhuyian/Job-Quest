@@ -226,20 +226,8 @@ font-size: 40px;
 }
 
 /* search jobs page */
-.icon button{
-    align-items: center;
-    padding-top: 30px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-.input{
-    border-radius: 10px;
-    border: 2.5px solid rgb(0, 65, 77);
-}
 .search{
-	width:600px;
-	margin: 20px 15%;
+	margin: 20px 35%;
 }
 
 .search .search_box{
@@ -292,33 +280,7 @@ font-size: 40px;
 	padding-right: 145px;
 }
 .search-section{
-    background-image: url(./media/img/search-background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 250px;
-}
-.all-in-one{
-    display: flex;
-    padding-top: 40px; 
-}
-#search-icon button{
-    width: 200px;
-    border-color: #222;
-    cursor:pointer;
-    background-image: url(./media/img/light\ blue\ paint\ brush.png);
-    background-repeat: no-repeat;
-    background-position:5px;
-    background-size: cover;
-    background-color: transparent;
-    border-color: white;
-}
-
-#search-icon button:hover{
-    color:white;
-    background-image: none;
-    transition: 0.5s ease;
-    background-image:url(./media/img/light\ blue\ paint\ brush.png);
-    
+    height: 80px;
 }
 
 #input-place{
@@ -348,10 +310,7 @@ font-size: 40px;
 
 
 
-.all-in-one select{
-    background-color:aliceblue;
-    color: #222;
-}
+
 
 .new-jobs-text{
     text-align: center;
