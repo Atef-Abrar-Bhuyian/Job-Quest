@@ -188,6 +188,9 @@ font-size: 40px;
 }
 .category a:hover{
     color: #015c75;
+    margin-left: 10px;
+    font-weight: 600;
+    transition: 0.1s ease;
 }
 .category li{
     margin: 30px 10px;
@@ -219,9 +222,10 @@ font-size: 40px;
     width: 50%;
     margin-left: 5%;
     margin-right: 5%;
-    padding: 20px;
+    padding: 30px;
     border-radius: 30px;
 }
+
 .box-shadow:hover{
     box-shadow: 10px 10px 60px rgba(33,33,33,.5);
 }
@@ -342,6 +346,7 @@ font-size: 40px;
     text-align: center;
     margin-left: 20%;
     padding:20px;
+    border-radius: 50px;
 }
 .filter{
     display: flex;
