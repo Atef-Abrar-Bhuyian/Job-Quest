@@ -364,7 +364,22 @@ font-size: 40px;
     margin-right: 10px;
 }
 
-
+.glow {
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  
+  .glow:hover {
+    color: cyan;
+    text-shadow:0px 0px 20px #5ACEF5 ;
+    -moz-transition: all 0.2s ease-in infinite alternate;
+    -o-transition: all 0.2s ease-in infinite alternate;
+    -webkit-transition: all 0.2s ease-in infinite alternate;
+    transition: all 0.4s ease-in infinite alternate;
+    
+  }
 .filter-section button,
 .search-style{
     margin-top: 50px;
@@ -382,6 +397,19 @@ font-size: 40px;
     color: #222;
     font-weight:900;
     transition: .3s ease;
+}
+
+.banner{
+    display:flex;
+    color: white;
+    width: 63%;
+    background-color: black;
+    margin-left: 20%;
+}
+.banner ul{
+    list-style: none;
+display: flex;
+    padding: 10px 190px;
 }
 /* For footer */
 footer {
