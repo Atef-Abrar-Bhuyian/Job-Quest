@@ -287,7 +287,6 @@ transition: 0.4s ease-in;
 
 .fire{
     color: #5ACEF5;
-
 }
 
 .search.searchbar .search_box .btn
@@ -424,6 +423,20 @@ transition: 0.4s ease-in;
 display: flex;
     padding: 10px 190px;
 }
+
+.full-banner{
+    background-image:url(./media/img/building\ shadow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    text-align: center;
+    padding-top: 150px;
+    margin-right: 50px;
+    color: #222;
+}
+
+
+
 /* For footer */
 footer {
     display: flex;
