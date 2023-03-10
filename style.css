@@ -475,6 +475,7 @@ display: flex;
 .for-log-in{
     margin: 80px;
     padding: 60px;
+    padding-top: 0;
     padding-left: 150px;
 }
 .for-log-in label{
@@ -514,7 +515,6 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #fff;
     margin: 10px 20px;
 }
 
@@ -631,14 +631,14 @@ footer .copyright {
     height: 8px;
     width: 8px;
     background: #ffffff;
-    bottom: -3px;
+    bottom: 22px;
     left: 50%;
     transform: translate(-50%) rotate(45deg);
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   
   .wrapper .icon:hover .tooltip {
-    top: -45px;
+    top: 45px;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
