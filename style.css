@@ -435,7 +435,27 @@ display: flex;
     color: #222;
 }
 
+/* Log in page */
+.login{
+    display: flex;
+}
 
+.half-logo{
+    margin: 50px;
+    padding-top: 90px;
+    padding-left: 150px;
+}
+.half-logo h2{
+    font-weight: 900;
+    color: #222;
+    
+}
+
+.half-logo img{
+    padding-top: 60px;
+    width: 350px;
+    height: 300px;
+}
 
 /* For footer */
 footer {
