@@ -472,7 +472,7 @@ display: flex;
     width: 300px;
 }
 
-.submit{
+.login-button{
     color: white;
     background-color: #5F9EA0;
     cursor: pointer;
@@ -484,9 +484,11 @@ display: flex;
     margin-left: 225px;
 }
 
-.submit:hover{
+.login-button:hover{
+    font-weight: bold;
     color: #5ACEF5;
     background-color: black;
+    transition: 0.5s ease;
 }
 
 
