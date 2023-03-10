@@ -375,20 +375,38 @@ transition: 0.4s ease-in;
     margin-right: 10px;
 }
 
-.glow {
+.glow{
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
-  }
-  
-  .glow:hover {
-    color: cyan;
-    text-shadow:0px 0px 20px #5ACEF5 ;
+    color:rgba(0, 255, 255, 0.8);
+    background-color: black;
+    border: 1px solid cyan;
+    text-shadow:0px 0px 14px cyan;
+    height: 50px;
+    padding-top: 10px;
     -moz-transition: all 0.2s ease-in infinite alternate;
     -o-transition: all 0.2s ease-in infinite alternate;
     -webkit-transition: all 0.2s ease-in infinite alternate;
     transition: all 0.4s ease-in infinite alternate;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .glow:hover {
+    color:cyan;
+    background-color: black;
+    border: 1px solid cyan;
+    text-shadow:0px 0px 14px cyan;
+    height: 50px;
+    padding-top: 10px;
+    -moz-transition: all 0.2s ease-in infinite alternate;
+    -o-transition: all 0.2s ease-in infinite alternate;
+    -webkit-transition: all 0.2s ease-in infinite alternate;
+    transition: all 0.2s ease-in infinite alternate;
+    text-align: center;
     
   }
 .filter-section button,
@@ -441,13 +459,8 @@ display: flex;
 
 .half-logo{
     margin: 50px;
-    padding-top: 90px;
+    padding-top: 30px;
     padding-left: 150px;
-}
-.half-logo h2{
-    padding-left: 25px;
-    font-weight: bolder;
-    color: #222;
 }
 
 .half-logo img{
@@ -457,7 +470,7 @@ display: flex;
 }
 .for-log-in p{
     padding-bottom: 10px;
-    font-weight: bold;
+    
 }
 .for-log-in{
     margin: 80px;
@@ -489,6 +502,7 @@ display: flex;
     color: #5ACEF5;
     background-color: black;
     transition: 0.5s ease;
+    border: 1px solid #5F9EA0;
 }
 
 
