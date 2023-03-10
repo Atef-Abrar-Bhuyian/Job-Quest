@@ -448,7 +448,6 @@ display: flex;
 .half-logo h2{
     font-weight: 900;
     color: #222;
-    
 }
 
 .half-logo img{
@@ -457,6 +456,11 @@ display: flex;
     height: 300px;
 }
 
+.for-log-in{
+    margin: 80px;
+    padding: 60px;
+    padding-left: 150px;
+}
 /* For footer */
 footer {
     display: flex;
