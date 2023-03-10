@@ -10,7 +10,6 @@ header{
     justify-content:space-around;
     align-items: center;
     padding: 30px 10px 20px 40px;
-    background-color: rgb(90, 206, 245); 
     height: 30px;
 }
 
@@ -43,15 +42,15 @@ header{
     transition: all 0.3s ease 0s;
     text-decoration: none;
     color:rgb(12, 91, 156);
-    color: white;
+    color: black;
 }
 .nav_links li a:hover{
     color: #222;
-    border-bottom:1px solid #222;
+    border-bottom:1px solid #0292be;
     z-index: 999;
     position: sticky;
-    transition: 0.8s ease;
-    border-radius: 10%;
+    transition: 0.8s ease ;
+    border-radius: 5px;
 }
 .cta button{
     margin-left: 100px;
@@ -75,7 +74,7 @@ header{
 }
 
 .active{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #0292be;
     border-width: 0.2%;
     border-radius: 10%;
 }
@@ -446,7 +445,8 @@ display: flex;
     padding-left: 150px;
 }
 .half-logo h2{
-    font-weight: 900;
+    padding-left: 25px;
+    font-weight: bolder;
     color: #222;
 }
 
@@ -455,11 +455,21 @@ display: flex;
     width: 350px;
     height: 300px;
 }
-
+.for-log-in p{
+    padding-bottom: 10px;
+    font-weight: bold;
+}
 .for-log-in{
     margin: 80px;
     padding: 60px;
     padding-left: 150px;
+}
+.for-log-in label{
+    padding: 10px;
+}
+.for-log-in input{
+    padding: 5px;
+    width: 300px;
 }
 /* For footer */
 footer {
