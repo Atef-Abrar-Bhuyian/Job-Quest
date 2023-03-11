@@ -454,12 +454,30 @@ display: flex;
 
 /* Prepare page */
 
+.prepare-div{
+    width: 80%;
+    height: 300px;
+    display: flex;
+    margin-left: 150px;
+    margin-top: 20px;
+    padding-top: 10px;
+    margin-bottom: 60px;
+}
+.prepare-div:hover{
+    box-shadow: 0 10px 10px rgba(8, 8, 8, 0.5);
+}
+.prepare-div iframe{
+    width: 200%;
+    height: 100%;   
+}
 
+.half-text{
+    margin-left: 280px;
+}
 
-
-
-
-
+.half-video{
+    width: 80%;
+}
 /* Log in page */
 .login{
     display: flex;
