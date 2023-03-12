@@ -284,10 +284,6 @@ transition: 0.4s ease-in;
 	border-radius: 50px;
 }
 
-.fire{
-    color: #5ACEF5;
-}
-
 .search.searchbar .search_box .btn
 {
 	width: 125px;
