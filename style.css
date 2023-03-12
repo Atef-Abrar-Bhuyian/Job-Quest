@@ -578,7 +578,7 @@ display: flex;
     width: 70%;
     margin-left: 150px;
     color: black;
-    
+    margin-bottom: 20px;
 }
 
 .offices{
@@ -614,10 +614,6 @@ footer .column {
     margin-bottom: 20px;
 }
 
-footer .flogo {
-    margin-bottom: 30px;
-}
-
 footer h4 {
     font-size: 14px;
     padding-bottom: 20px;
@@ -641,8 +637,8 @@ footer .follow {
 
 .logo-footer img{
     width: 3rem;
-    margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    
 }
 footer .follow i {
     color: #465b52;
