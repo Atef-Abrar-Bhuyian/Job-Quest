@@ -343,7 +343,7 @@ border-radius: 30px;
 }
 .filter-section{
     border: 1px solid #2222224b;
-    height: 200px;
+    height: 300px;
     width: 60%;
     align-items: center;
     text-align: center;
@@ -364,12 +364,11 @@ border-radius: 30px;
     color: #222;
 }
 .filter select{
-    color: #015c75;
     border: 1px solid #295c6a;
-    background-color:#f2fcff;
     font-size: medium;
     margin-left: 10px;
     margin-right: 10px;
+
 }
 
 .glow{
@@ -442,7 +441,7 @@ display: flex;
     background-image:url(./media/img/building\ shadow.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 200px;
+    height: 300px;
     text-align: center;
     padding-top: 150px;
     margin-right: 50px;
