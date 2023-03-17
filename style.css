@@ -790,14 +790,23 @@ display: flex;
 
 .single-jobs-divs{
     border:1px solid #015c75;
-    width: 80%;
+    width: 70%;
     height: 400px;
     margin-bottom: 40px;
     padding: 40px;
     border-radius: 30px;  
-    margin-left: 130px;
+    margin-left: 60px;
     margin-top: 80px;
+    margin-right: 20px;
 }
+
+.img-side img{
+    width: 100%;
+    height: 90%;
+    margin-top: 40px;
+    border-radius:10px;
+}
+
 
 .glow-apply-btn{
     -moz-transition: all 0.2s ease-in;
@@ -816,7 +825,7 @@ display: flex;
     width: 120px;
     text-align: center;
     border-radius: 20px;
-    margin-left: 900px;
+    margin-left: 700px;
     margin-top: 70px;
   }
   
@@ -832,6 +841,11 @@ display: flex;
     transition: all 0.2s ease-in infinite alternate;
     text-align: center;
   }
+
+.job-and-poster{
+    display: flex;
+}
+
 
 /* For footer */
 footer {
