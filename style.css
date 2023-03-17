@@ -770,6 +770,24 @@ display: flex;
 }
 
 
+/* user profile page */
+.user-site h3{
+    padding-bottom: 20px;
+}
+.user-site{
+    padding-right: 100px;
+}
+.user-section{
+    display: flex;
+    width: 80%;
+    height: 500px;
+    padding: 50px;
+}
+
+.jobs-site{
+    padding-left: 300px;
+}
+
 
 /* For footer */
 footer {
