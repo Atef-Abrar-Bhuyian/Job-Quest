@@ -788,6 +788,50 @@ display: flex;
     padding-left: 300px;
 }
 
+.single-jobs-divs{
+    border:1px solid #015c75;
+    width: 80%;
+    height: 400px;
+    margin-bottom: 40px;
+    padding: 40px;
+    border-radius: 30px;  
+    margin-left: 130px;
+    margin-top: 80px;
+}
+
+.glow-apply-btn{
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in infinite alternate;
+    -o-transition: all 0.2s ease-in infinite alternate;
+    -webkit-transition: all 0.2s ease-in infinite alternate;
+    transition: all 0.4s ease-in infinite alternate;
+    transition: all 0.2s ease-in;
+    color:rgba(0, 255, 255, 0.8);
+    background-color: black;
+    border: 1px solid cyan;
+    text-shadow:0px 0px 14px cyan;
+    height: 60px;
+    width: 120px;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: 900px;
+    margin-top: 70px;
+  }
+  
+  .glow-apply-btn:hover {
+    color:white;
+    background-color: black;
+    border: 1px solid cyan;
+    text-shadow:0px 0px 14px cyan;
+    height: 60px;
+    -moz-transition: all 0.2s ease-in infinite alternate;
+    -o-transition: all 0.2s ease-in infinite alternate;
+    -webkit-transition: all 0.2s ease-in infinite alternate;
+    transition: all 0.2s ease-in infinite alternate;
+    text-align: center;
+  }
 
 /* For footer */
 footer {
