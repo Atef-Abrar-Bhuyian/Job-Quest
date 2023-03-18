@@ -806,18 +806,44 @@ display: flex;
 .user-site{
     padding-top: 100px;
     padding-right: 100px;
+    border: 1px solid #015c75;
+    height: 240px;
+    padding: 20px;
+    margin-top: 70px;
+    border-radius: 30px;
+    width: 40%;
 }
 .user-section{
     display: flex;
     width: 80%;
-    height: 500px;
+    height: 300px;
     padding: 50px;
+    
+}
+.apply-heading{
+    margin-left: 250px;
 }
 
-.jobs-site{
-    padding-left: 300px;
+
+.bookmark-jobs h3{
+    text-align: center;
+}
+.bookmark-jobs-divs{
+    margin-left: 20px;
+    margin-top: 40px;
+    border:1px solid #015c75;
+    width: 180%;
+    height: 200px;
+    margin-bottom: 40px;
+    padding: 40px;
+    border-radius: 30px;    
 }
 
+.bookmark-jobs-text{
+    text-align: center;
+    padding-top: 50px;
+    font-weight: bold;
+}
 
 /* single job page */
 
