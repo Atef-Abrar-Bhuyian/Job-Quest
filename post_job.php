@@ -3,16 +3,20 @@ session_start();
 error_reporting(0);
 include('dbconnect.php');
 
-if (isset($_POST['Submit'])) {
-    $name = $_POST['h_u_name'];
-    $e_mail = $_POST['h_u_email'];
-    $subject = $_POST['h_u_subject'];
-    $message = $_POST['h_u_msg'];
-    $query1 = mysqli_query($con, "insert into help_form(h_u_name,h_u_email,h_u_subject,h_u_msg) 
-                                values ('$name','$e_mail','$subject','$message')");
+if (isset($_POST['publish'])) {
+    $a_name = $_POST['applier_name'];
+    $a_mbl = $_POST['applier_mbl_number'];
+    $a_nid = $_POST['applier_nid'];
+    $a_email = $_POST['applier_email'];
+    $j_title = $_POST['job_title'];
+    $j_des = $_POST['job_descirption'];
+    $j_loc = $_POST['job_location'];
+    $j_exp = $_POST['job_experience'];
+    $query1 = mysqli_query($con, "insert into post_job_form(applier_name,applier_mbl_number,applier_nid,applier_email,job_title,job_descirption,job_location,job_experience) 
+                                values ('$a_name','$a_mbl','$a_nid','$a_email','$j_title','$j_des','$j_loc','$j_exp')");
     if ($query1) {
         echo "<script>alert('Your Response Sent');</script>";
-        header('location:contact.php');
+        header('location:index.php');
     } else {
         $msg = "Something Went Wrong. Please try again.";
     }
@@ -93,21 +97,21 @@ if (isset($_POST['signup'])) {
             <div class="for-flex">
                 <div>
                     <h4>User Information</h4>
-                    <input type="text" name='' placeholder="Name">
-                    <input type="text" name='' placeholder="Mobile Number">
-                    <input type="text" name='' placeholder="NID Number">
-                    <input type="text" name='' placeholder="Email">
+                    <input type="text" name='applier_name' placeholder="Name" required>
+                    <input type="text" name='applier_mbl_number' placeholder="Mobile Number" required>
+                    <input type="text" name='applier_nid' placeholder="NID Number" required>
+                    <input type="text" name='applier_email' placeholder="Email" required>
                 </div>
 
                 <div>
                     <h4>About Job</h4>
-                    <input type="text" name='' placeholder="Title">
-                    <textarea name="h_u_msg" id="" cols="10" rows="5" placeholder="Descirption"></textarea>
-                    <input type="text" name='' placeholder="Location">
-                    <input type="text" name='' placeholder="Experience">
+                    <input type="text" name='job_title' placeholder="Title" required>
+                    <textarea name="job_descirption" id="" cols="10" rows="5" placeholder="Descirption" required></textarea>
+                    <input type="text" name='job_location' placeholder="Location" required>
+                    <input type="text" name='job_experience' placeholder="Experience" required>
                 </div>
             </div>
-            <button class="glow-search-btn" name='Submit'>Publish</button>
+            <button class="glow-search-btn" name='publish'>Publish</button>
         </form>
     </section>
 
