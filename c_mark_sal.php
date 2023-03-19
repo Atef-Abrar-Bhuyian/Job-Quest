@@ -110,11 +110,11 @@ if (isset($_POST['search_filter'])) {
     </div>
 
     <section>
-        <h2 class="catergory-text">Category: Data Entry/Operator/BPO</h2>
+        <h2 class="catergory-text">Category: Marketing/Sales</h2>
         <div class="new-jobs">
             <?php
             $User_ID = $_SESSION['uid'];
-            $ret1 = mysqli_query($con, "Select * From data_oper ");
+            $ret1 = mysqli_query($con, "Select * From mark_sal ");
             $num = mysqli_num_rows($ret1);
 
             while ($result1 = mysqli_fetch_array($ret1)) {

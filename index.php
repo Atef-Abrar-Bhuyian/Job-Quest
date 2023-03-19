@@ -97,7 +97,7 @@ if (isset($_POST['signup'])) {
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="c_edu_train.php">
                             Education/Training
                         </a>
                     </li>
