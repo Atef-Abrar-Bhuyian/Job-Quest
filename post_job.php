@@ -112,6 +112,8 @@ if (isset($_POST['signup'])) {
                 </div>
             </div>
             <button class="glow-search-btn" name='publish'>Publish</button>
+            <br> <br>
+            <p> <strong>N.B.</strong> Your Post Will be Upload in next 10 days.</p>
         </form>
     </section>
 
