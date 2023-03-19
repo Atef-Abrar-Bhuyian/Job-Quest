@@ -163,7 +163,15 @@ if (isset($_POST['signup'])) {
                     </a>
                 </div><br>
                 <h3>Create Your Resume</h3><br>
-                <p>For Create </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatibus blanditiis nemo fugit aspernatur.
+                    <br> <b>Wtih the help of these websites you can create your own resume.</b>
+                </p>
+                <div class="a-link">
+                    <i class="fa-sharp fa-solid fa-link"></i> <a href="https://www.myperfectresume.com/">MyPerfectResume</a><br>
+                    <i class="fa-sharp fa-solid fa-link"></i> <a href="https://www.visualcv.com/">VisualCV</a> <br>
+                    <i class="fa-sharp fa-solid fa-link"></i> <a href="https://www.resume.com/">resume.com</a> <br>
+                    <i class="fa-sharp fa-solid fa-link"></i> <a href="https://zety.com/">zety</a> <br>
+                </div>
             </div>
             <div class="box-shadow">
                 <div class="img-wrapper">

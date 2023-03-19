@@ -31,8 +31,7 @@
 
     <div class="column">
         <h4>About</h4>
-        <a href="about.php">About Us</a>
-        <a href="downloadpage.php"></a>
+        <a href="downloadpage.php">About Us</a>
         <a href="downloadpage.php">Privacy Policy</a>
         <a href="downloadpage.php">Terms & Condition</a>
         <a href="adminlogin.php">Admin Panel</a>
@@ -41,10 +40,14 @@
 
     <div class="column">
         <h4>My Account</h4>
-        <a href="login.php">Sign in</a>
-        <a href="cart.php"></a>
-        <a href="cart.php">My Wishlist</a>
-        <a href="downloadpage.php"></a>
+        <a href="login.php">Account</a>
+        <a href="login.php">Bookmark</a>
+        <a href="contact.php">Help</a>
+    </div>
+    <div class="column">
+        <h4>Job</h4>
+        <a href="post_job.php.php">Post a Job</a>
+        <a href="search_jobs.php">Apply For a Job</a>
         <a href="contact.php">Help</a>
     </div>
     <div class="copyright">
