@@ -102,12 +102,12 @@ if (isset($_POST['signup'])) {
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="c_eng_arch.php">
                             Engineer/Architects
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="c_garm_tex.php">
                             Garments/Textile
                         </a>
                     </li>
@@ -117,27 +117,27 @@ if (isset($_POST['signup'])) {
             <div class="category">
                 <ul type="none">
                     <li>
-                        <a href="">
+                        <a href="c_des_creat.php">
                             Design/Creative
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="c_pro_op.php">
                             Production/Operation
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="c_commer.php">
                             Commercial
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="c_mark_sal.php">
                             Marketing/Sales
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="c_it_tele.php">
                             IT & Telecommunication
                         </a>
                     </li>
@@ -147,27 +147,27 @@ if (isset($_POST['signup'])) {
             <div class="category">
                 <ul type="none">
                     <li>
-                        <a href="">
+                        <a href="c_medi_phar.php">
                             Medical/Pharma
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="c_agro.php">
                             Agro
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="c_law_leg.php">
                             Law/Legal
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="c_ngo_deve.php">
                             NGO/Development
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="c_res_con.php">
                             Research/Consultancy
                         </a>
                     </li>
