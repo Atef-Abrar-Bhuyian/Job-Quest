@@ -73,13 +73,6 @@ if (isset($_POST['signup'])) {
 
         <div class="single-jobs-divs">
 
-            <?php
-            $JOB_ID = $_GET['editid'];
-            $ret1 = mysqli_query($con, "Select * From alljobs where id='$JOB_ID'");
-            $result1 = mysqli_fetch_array($ret1);
-            ?>
-
-
             <h4><?php echo $result1['Title']; ?>
             </h4><br>
 
