@@ -3,6 +3,21 @@ session_start();
 error_reporting(0);
 include('dbconnect.php');
 
+if (isset($_POST['Submit'])) {
+    $name = $_POST['h_u_name'];
+    $e_mail = $_POST['h_u_email'];
+    $subject = $_POST['h_u_subject'];
+    $message = $_POST['h_u_msg'];
+    $query1 = mysqli_query($con, "insert into help_form(h_u_name,h_u_email,h_u_subject,h_u_msg) 
+                                values ('$name','$e_mail','$subject','$message')");
+    if ($query1) {
+        echo "<script>alert('Your Response Sent');</script>";
+        header('location:contact.php');
+    } else {
+        $msg = "Something Went Wrong. Please try again.";
+    }
+}
+
 if (isset($_POST['Login'])) {
     $Email = $_POST['Email'];
     $Password = $_POST['Password'];
@@ -35,7 +50,6 @@ if (isset($_POST['signup'])) {
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,135 +75,41 @@ if (isset($_POST['signup'])) {
             <ul class="nav_links">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="search_jobs.php">Search Jobs</a></li>
-                <li><a class="active" href="interviewprep.php">Interview Preparation</a></li>
+                <li><a href="interviewprep.php">Interview Preparation</a></li>
                 <li><a href="login.php" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" id="text-white" aria-current="page">Sign in/ Log in</a></li>
             </ul>
         </nav>
         <a class="cta" href="contact.php"><button type="">Contact Us</button></a>
     </header>
 
-    <section>
-        <div class="head-title">
-            <h1 class="glow-heading"><span class="auto-input1"></span></h1>
-        </div>
-        <div class="prepare-div">
-            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/wexzvClUcUk?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen controls=1></iframe>
-            </div>
-            <div class="half-text">
-                <h3><i class="fa-solid fa-video"></i> How To Introduce Yourself In An Interview!
-                    (The BEST ANSWER!)
-                </h3>
-                <br>
-                <p><i class="fa-brands fa-youtube" style="color: red;"></i> CareerVidz</p>
-                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta ut fugiat at cumque
-                    vitae, possimus sunt commodi minima neque fuga. Deserunt sed aperiam sint soluta. Tempora vel atque
-                    quae.</span><br><br><br><br>
-                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
-            </div>
-        </div>
+    <h2 class="glow-loc"> <span class="auto-input2"></span> <i class="fa-sharp fa-solid fa-location-dot"></i></h2>
 
-        <div class="prepare-div">
-            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/TwZ7LgrPwR0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <section id="post-details">
+        <form action="" method="post">
+            <span>Want To Advertise You Job</span>
+            <h2>Publish Your Job By Completing This Form</h2> <br>
 
-            </div>
-            <div class="half-text">
-                <h3><i class="fa-solid fa-video"></i> How to Introduce Yourself in English | Tell Me Something About
-                    Yourself? - Interview Tips | ChetChat
-                </h3>
-                <br>
-                <p><i class="fa-brands fa-youtube" style="color: red;"></i> ChetChat </p>
-                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta ut fugiat at cumque
-                    vitae, possimus sunt commodi minima neque fuga. Deserunt sed aperiam sint soluta. Tempora vel atque
-                    quae.</span><br><br><br>
-                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
-            </div>
-        </div>
 
-        <div class="prepare-div">
-            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/KCm6JVtoRdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="for-flex">
+                <div>
+                    <h4>User Information</h4>
+                    <input type="text" name='' placeholder="Name">
+                    <input type="text" name='' placeholder="Mobile Number">
+                    <input type="text" name='' placeholder="NID Number">
+                    <input type="text" name='' placeholder="Email">
+                </div>
 
+                <div>
+                    <h4>About Job</h4>
+                    <input type="text" name='' placeholder="Title">
+                    <textarea name="h_u_msg" id="" cols="10" rows="5" placeholder="Descirption"></textarea>
+                    <input type="text" name='' placeholder="Location">
+                    <input type="text" name='' placeholder="Experience">
+                </div>
             </div>
-            <div class="half-text">
-                <h3><i class="fa-solid fa-video"></i> Interview Questions and Answers! (How to PASS a JOB INTERVIEW!)
-                </h3>
-                <br>
-                <p><i class="fa-brands fa-youtube" style="color: red;"></i> CareerVidz</p>
-                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta ut fugiat at cumque
-                    vitae, possimus sunt commodi minima neque fuga. Deserunt sed aperiam sint soluta. Tempora vel atque
-                    quae.</span><br><br><br><br><br>
-                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
-            </div>
-        </div>
-
-        <div class="prepare-div">
-            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/JrbnTZPjg0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-            </div>
-            <div class="half-text">
-                <h3><i class="fa-solid fa-video"></i> 12 Things That Ruin a First Impression Immediately
-                </h3>
-                <br>
-                <p><i class="fa-brands fa-youtube" style="color: red;"></i> BRIGHT SIDE</p>
-                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta ut fugiat at cumque
-                    vitae, possimus sunt commodi minima neque fuga. Deserunt sed aperiam sint soluta. Tempora vel atque
-                    quae.</span><br><br><br><br>
-                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
-            </div>
-        </div>
-
-        <div class="prepare-div">
-            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/8OGDhlUvSK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-            </div>
-            <div class="half-text">
-                <h3><i class="fa-solid fa-video"></i> Eye Contact Tips for Showing Confidence
-                </h3>
-                <br>
-                <p><i class="fa-brands fa-youtube" style="color: red;"></i> Communication Coach Alexander Lyon</p>
-                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta ut fugiat at cumque
-                    vitae, possimus sunt commodi minima neque fuga. Deserunt sed aperiam sint soluta. Tempora vel atque
-                    quae.</span><br><br><br><br>
-                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
-            </div>
-        </div>
+            <button class="glow-search-btn" name='Submit'>Publish</button>
+        </form>
     </section>
-
-    <section class="fourth-section">
-        <div class="flexible-container">
-            <div class="box-shadow">
-                <div class="img-wrapper">
-                    <a href="interviewprep.php">
-                        <img class="zoom-effect" src="./media/img/resume.jpg" alt="">
-                    </a>
-                </div><br>
-                <h3>Create Your Resume</h3><br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatibus blanditiis nemo fugit aspernatur.
-                    <br> <b>Wtih the help of these websites you can create your own resume.</b>
-                </p>
-
-                <i class="fa-sharp fa-solid fa-link"></i> <a href="https://www.myperfectresume.com/">MyPerfectResume</a><br>
-                <i class="fa-sharp fa-solid fa-link"></i> <a href="https://www.visualcv.com/">VisualCV</a> <br>
-                <i class="fa-sharp fa-solid fa-link"></i> <a href="https://www.resume.com/">resume.com</a> <br>
-                <i class="fa-sharp fa-solid fa-link"></i> <a href="https://zety.com/">zety</a> <br>
-
-            </div>
-            <div class="box-shadow">
-                <div class="img-wrapper">
-                    <a href="search_jobs.php">
-                        <img class="zoom-effect" src="./media/img/for hire.jpg" alt="">
-                    </a>
-                </div><br>
-                <h3>Apply Jobs</h3><br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aut fuga ipsum
-                    perspiciatis,
-                    sapiente officiis voluptate et! Nam maiores placeat quaerat aperiam tempore esse porro
-                    voluptatibus, quibusdam illo commodi velit.</p>
-            </div>
-        </div>
-        </a>
-    </section>
-
-
 
 
 
@@ -309,22 +229,21 @@ if (isset($_POST['signup'])) {
         </div>
     </div>
 
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <?php
     include('footer.php');
     ?>
 
-
-
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
-    var typed = new Typed(".auto-input1", {
-        strings: ["PREPARE YOURSELF TO BUILT A FABULOUS CAREER"],
-        typeSpeed: 130
+    var typed = new Typed(".auto-input2", {
+        strings: ["PUBLISH YOUR JOB"],
+        typeSpeed: 150
     })
 </script>
 

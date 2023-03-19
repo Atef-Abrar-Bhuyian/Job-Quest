@@ -46,7 +46,7 @@
     </div>
     <div class="column">
         <h4>Job</h4>
-        <a href="post_job.php.php">Post a Job</a>
+        <a href="post_job.php">Post a Job</a>
         <a href="search_jobs.php">Apply For a Job</a>
         <a href="contact.php">Help</a>
     </div>
