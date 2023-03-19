@@ -1,3 +1,41 @@
+<?php
+session_start();
+error_reporting(0);
+include('dbconnect.php');
+
+if (isset($_POST['Login'])) {
+    $Email = $_POST['Email'];
+    $Password = $_POST['Password'];
+    $query = mysqli_query($con, "select User_ID from signup where  email='$Email' && pass='$Password' ");
+    $ret = mysqli_fetch_array($query);
+    if ($ret > 0) {
+        $_SESSION['uid'] = $ret['User_ID'];
+        header('location:user_profile.php');
+    } else {
+        $msg = "Invalid Details.";
+    }
+}
+
+if (isset($_POST['signup'])) {
+    $uname = $_POST['username'];
+    $mnumber = $_POST['mobile_number'];
+    $e_mail = $_POST['email'];
+    $psw = $_POST['pass'];
+
+    $query1 = mysqli_query($con, "insert into signup(user_name,mobile_number,email,pass) 
+                                  values ('$uname','$mnumber','$e_mail','$psw')");
+    if ($query1) {
+        echo "<script>alert('Account Created Successfully');</script>";
+        header('location:index.php');
+    } else {
+        $msg = "Something Went Wrong. Please try again.";
+    }
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,28 +48,24 @@
     <link rel="shortcut icon" href="./media/logo/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/49c2b39c0f.js" crossorigin="anonymous"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Explora&family=Josefin+Sans&family=Montserrat&family=Moon+Dance&family=Poppins&family=Ramabhadra&family=Roboto+Condensed&family=Rubik&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Explora&family=Josefin+Sans&family=Montserrat&family=Moon+Dance&family=Poppins&family=Ramabhadra&family=Roboto+Condensed&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style.css">
     <title>Job Search</title>
 </head>
 
 <body>
     <header>
-        <span class="logo"><a href="index.html"><img src="./media/logo/logo.png" alt=""></a></span>
+        <span class="logo"><a href="index.php"><img src="./media/logo/logo.png" alt=""></a></span>
         <nav class="header">
             <ul class="nav_links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="search_jobs.html">Search Jobs</a></li>
-                <li><a class="active" href="interviewprep.html">Interview Preparation</a></li>
-                <li><a href="login.html" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@getbootstrap" id="text-white" aria-current="page">Sign in/ Log in</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="search_jobs.php">Search Jobs</a></li>
+                <li><a class="active" href="interviewprep.php">Interview Preparation</a></li>
+                <li><a href="login.php" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" id="text-white" aria-current="page">Sign in/ Log in</a></li>
             </ul>
         </nav>
-        <a class="cta" href="contact.html"><button type="">Contact Us</button></a>
+        <a class="cta" href="contact.php"><button type="">Contact Us</button></a>
     </header>
 
     <section>
@@ -39,10 +73,7 @@
             <h1 class="glow-heading"><span class="auto-input1"></span></h1>
         </div>
         <div class="prepare-div">
-            <div class="half-video"><iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/wexzvClUcUk?start=3" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen controls=1></iframe>
+            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/wexzvClUcUk?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen controls=1></iframe>
             </div>
             <div class="half-text">
                 <h3><i class="fa-solid fa-video"></i> How To Introduce Yourself In An Interview!
@@ -53,16 +84,12 @@
                 <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta ut fugiat at cumque
                     vitae, possimus sunt commodi minima neque fuga. Deserunt sed aperiam sint soluta. Tempora vel atque
                     quae.</span><br><br><br><br>
-                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i
-                            class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
+                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
             </div>
         </div>
 
         <div class="prepare-div">
-            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/TwZ7LgrPwR0"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/TwZ7LgrPwR0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             </div>
             <div class="half-text">
@@ -74,16 +101,12 @@
                 <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta ut fugiat at cumque
                     vitae, possimus sunt commodi minima neque fuga. Deserunt sed aperiam sint soluta. Tempora vel atque
                     quae.</span><br><br><br>
-                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i
-                            class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
+                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
             </div>
         </div>
 
         <div class="prepare-div">
-            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/KCm6JVtoRdo"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/KCm6JVtoRdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             </div>
             <div class="half-text">
@@ -94,16 +117,12 @@
                 <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta ut fugiat at cumque
                     vitae, possimus sunt commodi minima neque fuga. Deserunt sed aperiam sint soluta. Tempora vel atque
                     quae.</span><br><br><br><br><br>
-                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i
-                            class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
+                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
             </div>
         </div>
 
         <div class="prepare-div">
-            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/JrbnTZPjg0k"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/JrbnTZPjg0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             </div>
             <div class="half-text">
@@ -114,16 +133,12 @@
                 <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta ut fugiat at cumque
                     vitae, possimus sunt commodi minima neque fuga. Deserunt sed aperiam sint soluta. Tempora vel atque
                     quae.</span><br><br><br><br>
-                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i
-                            class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
+                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
             </div>
         </div>
 
         <div class="prepare-div">
-            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/8OGDhlUvSK4"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+            <div class="half-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/8OGDhlUvSK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             </div>
             <div class="half-text">
@@ -134,8 +149,7 @@
                 <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos soluta ut fugiat at cumque
                     vitae, possimus sunt commodi minima neque fuga. Deserunt sed aperiam sint soluta. Tempora vel atque
                     quae.</span><br><br><br><br>
-                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i
-                            class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
+                <p style="padding-left: 150px;"><button class="glow-btn-preapare">Show More <i class="fa-solid fa-forward" style="color: cyan;"></i> </button></p>
             </div>
         </div>
     </section>
@@ -144,19 +158,16 @@
         <div class="flexible-container">
             <div class="box-shadow">
                 <div class="img-wrapper">
-                    <a href="interviewprep.html">
+                    <a href="interviewprep.php">
                         <img class="zoom-effect" src="./media/img/resume.jpg" alt="">
                     </a>
                 </div><br>
                 <h3>Create Your Resume</h3><br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aut fuga ipsum
-                    perspiciatis,
-                    sapiente officiis voluptate et! Nam maiores placeat quaerat aperiam tempore esse porro
-                    voluptatibus, quibusdam illo commodi velit.</p>
+                <p>For Create </p>
             </div>
             <div class="box-shadow">
                 <div class="img-wrapper">
-                    <a href="search_jobs.html">
+                    <a href="search_jobs.php">
                         <img class="zoom-effect" src="./media/img/for hire.jpg" alt="">
                     </a>
                 </div><br>
@@ -176,16 +187,14 @@
 
 
     <!--######################### Modal ##########################-->
-    <div class="modal py-5 fade" tabindex="-1" role="dialog" id="exampleModal" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal py-5 fade" tabindex="-1" role="dialog" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content rounded-4 shadow bg-palegreen">
                 <div class="modal-header flex-column w-100 p-5 pb-4 border-bottom-0">
                     <div class="modal-header border-0 px-0 py-2 w-100">
                         <ul class="nav nav-tabs w-75 border-new-color">
                             <li class="nav-item w-50">
-                                <a class="nav-link active fw-bolder" data-bs-toggle="tab" aria-current="page"
-                                    href="#log-in">LOGIN</a>
+                                <a class="nav-link active fw-bolder" data-bs-toggle="tab" aria-current="page" href="#log-in">LOGIN</a>
                             </li>
                             <li class="nav-item w-50">
                                 <a class="nav-link fw-bolder" data-bs-toggle="tab" href="#sign-up">SIGNUP</a>
@@ -200,21 +209,22 @@
                     <div id="log-in" class="modal-body tab-pane show active p-5 pt-0">
                         <div class="modal-header px-0 py-2 w-100 border-0">
                             <h1 class="fw-bold mb-0 fs-2">Log In</h1>
+                            <h6 style="font-size:16px;margin-top:15px;margin-bottom:2px;color:red" align="center"> <?php if ($msg) {
+                                                                                                                        echo $msg;
+                                                                                                                    }  ?> </h6>
                         </div>
-                        <form class="">
+                        <form action="#" method="post" class="">
                             <!-- email -->
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control rounded-3" id="floatingInput"
-                                    placeholder="name@example.com">
+                                <input type="email" name="Email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput">Email address</label>
                             </div>
                             <!-- password -->
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control rounded-3" id="floatingPassword"
-                                    placeholder="Password">
+                                <input type="password" name="Password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
                                 <label for="floatingPassword">Password</label>
                             </div>
-                            <button class="w-100 mb-2 btn btn-lg rounded-3 bg-darkgreen text-light" type="submit">Log
+                            <button name='Login' class="w-100 mb-2 btn btn-lg rounded-3 bg-darkgreen text-light" type="submit">Log
                                 in</button>
                             <span class="d-flex justify-content-between align-items-center my-3">
                                 <hr style="width: 40%;">
@@ -243,30 +253,24 @@
                         <div class="modal-header px-0 py-2 w-100 border-0">
                             <h1 class="fw-bold mb-0 fs-2">Sign up </h1>
                         </div>
-                        <form class="">
-                            <!-- Name -->
+                        <form class="" method="post">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control rounded-3" id="floatingInput"
-                                    placeholder="John Doe">
+                                <input name='username' type="text" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput">Name</label>
                             </div>
-                            <!-- mobile number -->
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control rounded-3" id="floatingInput"
-                                    placeholder="01** *** ****">
+                                <input name='mobile_number' type="text" class="form-control rounded-3" id="floatingInput" placeholder="01********">
                                 <label for="floatingInput">Mobile Number</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control rounded-3" id="floatingInput"
-                                    placeholder="name@example.com">
+                                <input name='email' type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput">Email address</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control rounded-3" id="floatingPassword"
-                                    placeholder="Password">
+                                <input name='pass' type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
                                 <label for="floatingPassword">Password</label>
                             </div>
-                            <button class="w-100 mb-2 btn btn-lg rounded-3 bg-darkgreen text-light" type="submit">Sign
+                            <button name="signup" class="w-100 mb-2 btn btn-lg rounded-3 bg-darkgreen text-light" type="submit">Sign
                                 up</button>
                             <small class="text-muted">By clicking Sign up, you agree to the terms of
                                 use.</small>
@@ -297,54 +301,9 @@
         </div>
     </div>
 
-    <footer class="section-p1">
-        <div class="column">
-            <span class="logo-footer"><a href="index.html"><img src="./media/logo/logo.png" alt=""></a></span>
-            <div class="follow">
-                <p><b>Follow Us</b></p>
-                <ul class="wrapper">
-
-                    <li class="icon facebook">
-                        <span class="tooltip">Facebook</span>
-                        <span><i class="fab fa-facebook-f"></i></span>
-                    </li>
-                    <li class="icon twitter">
-                        <span class="tooltip">Twitter</span>
-                        <span><i class="fab fa-twitter"></i></span>
-                    </li>
-                    <li class="icon instagram">
-                        <span class="tooltip">Instagram</span>
-                        <span><i class="fab fa-instagram"></i></span>
-                    </li>
-                    <li class="icon github">
-                        <span class="tooltip">Github</span>
-                        <span><i class="fab fa-github"></i></span>
-                    </li>
-                    <li class="icon youtube">
-                        <span class="tooltip">Youtube</span>
-                        <span><i class="fab fa-youtube"></i></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="column">
-            <h4>About</h4>
-            <a href="about.html">About Us</a>
-            <a href="downloadpage.html"></a>
-            <a href="downloadpage.html">Privacy Policy</a>
-            <a href="downloadpage.html">Terms & Condition</a>
-            <a href="adminlogin.html">Admin Panel</a>
-        </div>
-        <div class="column">
-            <h4>My Account</h4>
-            <a href="login.html">Sign in</a>
-            <a href="contact.html">Help</a>
-        </div>
-        <div class="copyright">
-            <p>© 2023, Dept of CSE, Port City International University</p>
-        </div>
-    </footer>
+    <?php
+    include('footer.php');
+    ?>
 
 
 

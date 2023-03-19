@@ -220,12 +220,11 @@ border-radius: 30px;
 }
 .category-div{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 .category{
     display: flex;
     text-align: center;
-    padding-top: 0px;
 }
 
 .category a{
@@ -374,9 +373,13 @@ border-radius: 30px;
     right: 0px;
     border-radius: 50%;
 }
+
+.catergory-text{
+    padding-left: 80px;
+}
 .new-jobs{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     margin:5%;
     margin-bottom: 70px;
