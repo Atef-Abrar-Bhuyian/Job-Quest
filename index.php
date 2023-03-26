@@ -282,7 +282,7 @@ if (isset($_POST['signup'])) {
                                 <input type="password" name="Password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
                                 <label for="floatingPassword">Password</label>
                             </div>
-                            <button name='Login' class="w-100 mb-2 btn btn-lg rounded-3 bg-darkgreen text-light" type="submit">Log
+                            <button name='Login' class="w-100 mb-2 btn btn-lg glow rounded-3 bg-darkgreen text-light" type="submit">Log
                                 in</button>
                             <span class="d-flex justify-content-between align-items-center my-3">
                                 <hr style="width: 40%;">
@@ -328,7 +328,7 @@ if (isset($_POST['signup'])) {
                                 <input name='pass' type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
                                 <label for="floatingPassword">Password</label>
                             </div>
-                            <button name="signup" class="w-100 mb-2 btn btn-lg rounded-3 bg-darkgreen text-light" type="submit">Sign
+                            <button name="signup" class="w-100 mb-2 btn btn-lg glow rounded-3 bg-darkgreen text-light" type="submit">Sign
                                 up</button>
                             <small class="text-muted">By clicking Sign up, you agree to the terms of
                                 use.</small>

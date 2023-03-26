@@ -34,7 +34,7 @@
         <a href="downloadpage.php">About Us</a>
         <a href="downloadpage.php">Privacy Policy</a>
         <a href="downloadpage.php">Terms & Condition</a>
-        <a href="adminlogin.php">Admin Panel</a>
+        <a href="dashboard.php">Admin Panel</a>
     </div>
 
 
